@@ -7,4 +7,16 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    .container{:style => "padding-top: 70px"}
+      %h1
+        = link_to "Personal Budget", root_url
+      %br
+      %p
+        .notice= notice
+      %p
+        .alert= alert
+      = yield
+
+      %hr/
+      %footer
+        %p Copyright © Personal Budget
